@@ -6,14 +6,13 @@
 
 <p align="center">
   <img alt="Linguagem" src="https://img.shields.io/badge/rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white">
-  <img alt="Banco de Dados" src="https://img.shields.io/badge/sqlite-%23003B57.svg?style=for-the-badge&logo=sqlite&logoColor=white">
   <img alt="Licença" src="https://img.shields.io/github/license/CiceroGGS/todo_list_rust_PLUS?style=for-the-badge&color=blue">
   <a href="https://github.com/CiceroGGS/todo_list_rust_PLUS/actions/workflows/rust.yml">
     <img alt="Status da Build" src="https://img.shields.io/github/actions/workflow/status/CiceroGGS/todo_list_rust_PLUS/rust.yml?branch=main&style=for-the-badge">
   </a>
 </p>
 
-Um aplicativo de linha de comando (CLI) simples e eficiente escrito em Rust, projetado para gerenciar tarefas com persistência de dados em um banco de dados **SQLite**.
+Um aplicativo de linha de comando (CLI) simples e eficiente escrito em Rust, projetado para gerenciar tarefas com persistência de dados local em arquivos.
 
 ---
 
@@ -46,7 +45,7 @@ Um aplicativo de linha de comando (CLI) simples e eficiente escrito em Rust, pro
 * **🗑️ Remover Tarefas**: Exclua tarefas de forma segura pelo seu ID.
 * **🔀 Ordenar Tarefas**: Organize a visualização das tarefas por status de conclusão.
 * **🔄 Resetar Tudo**: Apague todas as tarefas para começar do zero.
-* **💾 Armazenamento Persistente**: Utiliza SQLite para garantir que seus dados sejam salvos entre as sessões.
+* **💾 Armazenamento Persistente**: Salva seus dados localmente para garantir que não se percam entre as sessões.
 
 ---
 
@@ -56,7 +55,6 @@ Siga os passos abaixo para ter o `todo_list_rust_PLUS` funcionando em sua máqui
 
 #### Pré-requisitos
 * [**Rust**](https://www.rust-lang.org/tools/install) (toolchain completa com `rustup` e `cargo`).
-* **SQLite** (geralmente já vem instalado na maioria dos sistemas Linux e macOS).
 
 #### Passos de Instalação
 
@@ -83,7 +81,7 @@ Siga os passos abaixo para ter o `todo_list_rust_PLUS` funcionando em sua máqui
     # Agora você pode usar apenas 'todo' em vez de 'todo_list_rust_PLUS'
     ```
 
-> O aplicativo cria automaticamente um diretório `.todo_db` na sua pasta de usuário (`$HOME`) para armazenar o banco de dados.
+> O aplicativo cria os arquivos necessários em sua pasta de usuário (`$HOME`) para armazenar as tarefas.
 
 ---
 
